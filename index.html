@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking.com Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#">Booking.com</a>
+            </div>
+            <div class="header-right">
+                <div class="currency hovereffect">INR</div>
+                <div class="country hovereffect">
+                    <img src="https://t-cf.bstatic.com/design-assets/assets/v3.148.1/images-flags/In@3x.png" alt="india" srcset="">
+                </div>
+                <div class="help-icon hovereffect">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20px"><path d="M9.75 9a2.25 2.25 0 1 1 3 2.122 2.25 2.25 0 0 0-1.5 2.122v1.006a.75.75 0 0 0 1.5 0v-1.006c0-.318.2-.602.5-.708A3.75 3.75 0 1 0 8.25 9a.75.75 0 1 0 1.5 0M12 16.5a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25.75.75 0 0 0 0 1.5.375.375 0 1 1 0-.75.375.375 0 0 1 0 .75.75.75 0 0 0 0-1.5M22.5 12c0 5.799-4.701 10.5-10.5 10.5S1.5 17.799 1.5 12 6.201 1.5 12 1.5 22.5 6.201 22.5 12m1.5 0c0-6.627-5.373-12-12-12S0 5.373 0 12s5.373 12 12 12 12-5.373 12-12"></path></svg>
+                </div>
+                <a href="#" class="property-link hovereffect">List your property</a>
+                <a href="#" class="register-btn ">Register</a>
+                <a href="#" class="signin-btn">Sign in</a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li class="nav-item active">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50px"><path d="M2.75 12h18.5c.69 0 1.25.56 1.25 1.25V18l.75-.75H.75l.75.75v-4.75c0-.69.56-1.25 1.25-1.25m0-1.5A2.75 2.75 0 0 0 0 13.25V18c0 .414.336.75.75.75h22.5A.75.75 0 0 0 24 18v-4.75a2.75 2.75 0 0 0-2.75-2.75zM0 18v3a.75.75 0 0 0 1.5 0v-3A.75.75 0 0 0 0 18m22.5 0v3a.75.75 0 0 0 1.5 0v-3a.75.75 0 0 0-1.5 0m-.75-6.75V4.5a2.25 2.25 0 0 0-2.25-2.25h-15A2.25 2.25 0 0 0 2.25 4.5v6.75a.75.75 0 0 0 1.5 0V4.5a.75.75 0 0 1 .75-.75h15a.75.75 0 0 1 .75.75v6.75a.75.75 0 0 0 1.5 0m-13.25-3h7a.25.25 0 0 1 .25.25v2.75l.75-.75h-9l.75.75V8.5a.25.25 0 0 1 .25-.25m0-1.5A1.75 1.75 0 0 0 6.75 8.5v2.75c0 .414.336.75.75.75h9a.75.75 0 0 0 .75-.75V8.5a1.75 1.75 0 0 0-1.75-1.75z"></path></svg>
+                    <span>Stays</span>
+                </li>
+                <li class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50px"><path d="m20.505 7.5-15.266.022.672.415-1.1-2.2a.75.75 0 0 0-.638-.414l-2.293-.1C.82 5.228-.003 6.06.003 7.083c.002.243.051.484.146.709l2.072 4.68a2.95 2.95 0 0 0 2.701 1.778h4.043l-.676-1.075-2.484 5.168A1.83 1.83 0 0 0 7.449 21h2.099a1.85 1.85 0 0 0 1.419-.664l5.165-6.363-.582.277h4.956c1.82.09 3.399-1.341 3.49-3.198l.004-.134a3.426 3.426 0 0 0-3.44-3.419l-.074.001zm.02 1.5h.042a1.924 1.924 0 0 1 1.933 1.914l-.002.065a1.866 1.866 0 0 1-1.955 1.772l-4.993-.001a.75.75 0 0 0-.582.277l-5.16 6.355a.35.35 0 0 1-.26.118h-2.1a.336.336 0 0 1-.3-.49l2.493-5.185a.75.75 0 0 0-.676-1.075H4.924a1.45 1.45 0 0 1-1.328-.878l-2.07-4.676a.35.35 0 0 1 .326-.474l2.255.1-.638-.415 1.1 2.2a.75.75 0 0 0 .672.415L20.507 9zm-4.202-1.24-2.992-4.02A1.85 1.85 0 0 0 11.85 3H9.783a1.85 1.85 0 0 0-1.654 2.672l1.439 2.91a.75.75 0 0 0 1.344-.664l-1.44-2.911a.35.35 0 0 1 .312-.507h2.066a.35.35 0 0 1 .279.14l2.99 4.017a.75.75 0 1 0 1.203-.896z"></path></svg>
+                    <span>Flights</span>
+                </li>
+                <li class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50px"><path d="m21.684 9.443-1.7-3.79c-.42-1.128-1.542-1.905-2.794-1.903H6.809a3 3 0 0 0-2.811 1.947L2.316 9.443a.75.75 0 1 0 1.368.614l1.7-3.79c.238-.63.798-1.018 1.424-1.017h10.383a1.5 1.5 0 0 1 1.407.973l1.718 3.834a.75.75 0 1 0 1.368-.614M.75 16.468V18a2.25 2.25 0 0 0 4.5 0v-1.5a.75.75 0 0 0-1.5 0V18a.75.75 0 0 1-1.5 0v-1.532a.75.75 0 0 0-1.5 0m21 0V18a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 0-1.5 0V18a2.25 2.25 0 0 0 4.5 0v-1.532a.75.75 0 0 0-1.5 0M19.875 13.5a.375.375 0 0 1-.375-.375.75.75 0 0 0 1.5 0c0-.621-.504-1.125-1.125-1.125a.75.75 0 0 0 0 1.5m.375-.375a.375.375 0 0 1-.375.375.75.75 0 0 0 0-1.5c-.621 0-1.125.504-1.125 1.125a.75.75 0 0 0 1.5 0m-.375-.375c.207 0 .375.168.375.375a.75.75 0 0 0-1.5 0c0 .621.504 1.125 1.125 1.125a.75.75 0 0 0 0-1.5m-.375.375c0-.207.168-.375.375-.375a.75.75 0 0 0 0 1.5c.621 0 1.125-.504 1.125-1.125a.75.75 0 0 0-1.5 0M4.125 12C3.504 12 3 12.504 3 13.125a.75.75 0 0 0 1.5 0 .375.375 0 0 1-.375.375.75.75 0 0 0 0-1.5m1.125 1.125c0-.621-.504-1.125-1.125-1.125a.75.75 0 0 0 0 1.5.375.375 0 0 1-.375-.375.75.75 0 0 0 1.5 0M4.125 14.25c.621 0 1.125-.504 1.125-1.125a.75.75 0 0 0-1.5 0c0-.207.168-.375.375-.375a.75.75 0 0 0 0 1.5M3 13.125c0 .621.504 1.125 1.125 1.125a.75.75 0 0 0 0-1.5c.207 0 .375.168.375.375a.75.75 0 0 0-1.5 0M2.75 10.5h18.5c.69 0 1.25.56 1.25 1.25v3.75a.25.25 0 0 1-.25.25H1.75a.25.25 0 0 1-.25-.25v-3.75c0-.69.56-1.25 1.25-1.25m0-1.5A2.75 2.75 0 0 0 0 11.75v3.75c0 .966.784 1.75 1.75 1.75h20.5A1.75 1.75 0 0 0 24 15.5v-3.75A2.75 2.75 0 0 0 21.25 9z"></path></svg>
+                    <span>Car rentals</span>
+                </li>
+                <li class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50px"><path d="M13.5 3a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0M15 3a3 3 0 1 0-6 0 3 3 0 0 0 6 0m6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m1.5 0a3 3 0 1 0-6 0 3 3 0 0 0 6 0M6 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m1.5 0a3 3 0 1 0-6 0 3 3 0 0 0 6 0M21 15a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m1.5 0a3 3 0 1 0-6 0 3 3 0 0 0 6 0m-9-3.75a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m1.5 0a3 3 0 1 0-6 0 3 3 0 0 0 6 0M6 15a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m1.5 0a3 3 0 1 0-6 0 3 3 0 0 0 6 0m10.066 1.277a7.5 7.5 0 0 1-3.077 2.05.75.75 0 0 0 .498 1.415 9 9 0 0 0 3.693-2.46.75.75 0 1 0-1.114-1.005m1.798-6.466c.177.922.183 1.869.015 2.792a.75.75 0 1 0 1.476.268c.2-1.106.194-2.24-.019-3.344a.75.75 0 1 0-1.472.284m-5.337-5.784a7.5 7.5 0 0 1 3.54 2.196.75.75 0 0 0 1.113-1.004 9 9 0 0 0-4.247-2.636.75.75 0 1 0-.406 1.444M6.434 6.223a7.5 7.5 0 0 1 3.539-2.196.75.75 0 1 0-.406-1.444A9 9 0 0 0 5.32 5.219a.75.75 0 0 0 1.114 1.004M4.636 12.69a7.6 7.6 0 0 1 0-2.878.75.75 0 1 0-1.472-.284 9.1 9.1 0 0 0 0 3.446.75.75 0 0 0 1.472-.284m4.876 5.639a7.5 7.5 0 0 1-3.035-2.005.75.75 0 0 0-1.106 1.014 9 9 0 0 0 3.641 2.405.75.75 0 1 0 .5-1.414M7.31 21.872A1.5 1.5 0 0 0 8.672 24h6.656a1.5 1.5 0 0 0 1.362-2.128l-3.314-8.217c-.361-.785-1.252-1.114-2.005-.767a1.5 1.5 0 0 0-.733.734l-3.343 8.283zm1.377.595 3.328-8.25-.015.033 3.313 8.217.015.033H8.672z"></path></svg>
+                    <span>Attractions</span>
+                </li>
+                <li class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50px"><path d="M21.75 15.5V8a.75.75 0 0 0-1.5 0v7.5a.75.75 0 0 0 1.5 0m-16.5 0V8a.75.75 0 0 0-1.5 0v7.5a.75.75 0 0 0 1.5 0M3 8.75h3a.75.75 0 0 0 0-1.5H3a.75.75 0 0 0 0 1.5m6.75 6.75v-6a.75.75 0 0 1 1.5 0v6a.75.75 0 0 0 1.5 0v-6a2.25 2.25 0 0 0-4.5 0v6a.75.75 0 0 0 1.5 0M9 13.25h3a.75.75 0 0 0 0-1.5H9a.75.75 0 0 0 0 1.5m5.304-4.971 3 7.5a.75.75 0 0 0 1.392-.557l-3-7.5a.75.75 0 0 0-1.392.557m3-.558-3 7.5a.75.75 0 0 0 1.392.557l3-7.5a.75.75 0 0 0-1.392-.557M.75 5h22.5a.75.75 0 0 0 0-1.5H.75a.75.75 0 0 0 0 1.5m0 15h22.5a.75.75 0 0 0 0-1.5H.75a.75.75 0 0 0 0 1.5"></path></svg>
+                    <span>Airport taxis</span>
+                </li>
+                <li class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50px" data-rtl-flip="true"><path d="M6.306 17.25a8.25 8.25 0 1 1 11.69-7.502.75.75 0 1 0 1.5 0A9.75 9.75 0 0 0 13.812.889C8.917-1.356 3.13.791.884 5.685-1.36 10.58.786 16.367 5.68 18.613a.75.75 0 0 0 .626-1.364zM3.756 3.5l5.28 2a.75.75 0 0 1 .475.851l-.313 1.57a.75.75 0 0 1-.554.58l-2.08.518a.75.75 0 0 0-.514.45l-1.154 2.884a2.24 2.24 0 0 1-.84 1.037l-1.84 1.263a.75.75 0 1 0 .85 1.236l1.83-1.257a3.73 3.73 0 0 0 1.393-1.722l1.153-2.884-.514.449 2.079-.52a2.25 2.25 0 0 0 1.661-1.74l.314-1.57a2.25 2.25 0 0 0-1.417-2.548l-5.277-2A.75.75 0 1 0 3.756 3.5m11.565-.57-1.467 2.926a2.25 2.25 0 0 0-.122 1.718l.557 1.663a.75.75 0 1 0 1.422-.476L15.154 7.1a.75.75 0 0 1 .041-.572l1.466-2.924a.75.75 0 1 0-1.34-.672zm7.175 16.192v2.625a.75.75 0 0 1-.75.75h-10.5a.75.75 0 0 1-.75-.75v-5.25a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 .75.75zm1.5 0v-2.625a2.25 2.25 0 0 0-2.25-2.25h-10.5a2.25 2.25 0 0 0-2.25 2.25v5.25a2.25 2.25 0 0 0 2.25 2.25h10.5a2.25 2.25 0 0 0 2.25-2.25zm-12-4.125v8.25a.75.75 0 0 0 1.5 0v-8.25a.75.75 0 0 0-1.5 0m7.5 0v8.25a.75.75 0 0 0 1.5 0v-8.25a.75.75 0 0 0-1.5 0m-4.5.002v-.75a1.5 1.5 0 0 1 3 0V15a.75.75 0 0 0 1.5 0v-.75a3 3 0 1 0-6 0V15a.75.75 0 0 0 1.5 0z"></path></svg>
+                    <span>Flight + Hotel</span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="header-title">Find your next stay</h1>
+            <p class="header-subtitle">Search deals on hotels, homes, and much more...</p>
+            
+            <div class="search-box">
+                <div class="search-input">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <input type="text" placeholder="Where are you going?">
+                </div>
+                <div class="search-dates">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    <span>Check-in Check-out date</span>
+                </div>
+                <div class="search-guests">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>2 adults · 0 children · 1 room</span>
+                </div>
+                <button class="search-btn">Search</button>
+            </div>
+            
+            <div class="flight-checkbox">
+                <input type="checkbox" id="flight-search">
+                <label for="flight-search">I'm looking for flights</label>
+            </div>
+        </div>
+    </section>
+
+    <section class="offers">
+        <div class="container">
+            <h2 class="offers-title">Offers</h2>
+            <p class="p-subtitle">Promotions, deals, and special offers for you</p>
+            
+            <div class="offer-card">
+                <div class="offer-content">
+                    <h1>Quick escape, quality time</h1>
+                    <p class="p-subtitle">Save up to 20% with a Getaway Deal</p>
+                    <button class="offer-btn">Save on stays</button>
+                </div>
+                <div>
+                    <img src="./images/offers/offers.jpg" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="property-types">
+        <div class="container">
+          <h2>Browse by property type</h2>
+      
+          <div class="carousel-wrapper">
+            <button class="arrow left">&#10094;</button>
+      
+            <div class="property-carousel" id="carousel">
+              <div class="property-item">
+                <img src="https://q-xx.bstatic.com/xdata/images/hotel/263x210/595550862.jpeg?k=3514aa4abb76a6d19df104cb307b78b841ac0676967f24f4b860d289d55d3964&o=" alt="Hotels" />
+                <div class="overlay-text">
+                  <h3>Hotels</h3>
+                </div>
+
+              </div>
+              <div class="property-item">
+                <img src="https://q-xx.bstatic.com/xdata/images/hotel/263x210/595548591.jpeg?k=01741bc3aef1a5233dd33794dda397083092c0215b153915f27ea489468e57a2&o=" alt="Apartments" />
+                <div class="overlay-text">
+                  <h3>Apartments</h3>
+                </div>
+                
+              </div>
+              <div class="property-item">
+                <img src="https://r-xx.bstatic.com/xdata/images/hotel/263x210/595551044.jpeg?k=262826efe8e21a0868105c01bf7113ed94de28492ee370f4225f00d1de0c6c44&o=" alt="Resorts" />
+                <div class="overlay-text">
+                  <h3>Resorts</h3>
+                </div>
+                
+              </div>
+              <div class="property-item">
+                <img src="https://r-xx.bstatic.com/xdata/images/hotel/263x210/620168315.jpeg?k=300d8d8059c8c5426ea81f65a30a7f93af09d377d4d8570bda1bd1f0c8f0767f&o=" alt="Villas" />
+                <div class="overlay-text">
+                  <h3>Villas</h3>
+                </div>
+                
+              </div>
+              <div class="property-item">
+                <img src="https://q-xx.bstatic.com/xdata/images/hotel/263x210/595549239.jpeg?k=ad5273675c516cc1efc6cba2039877297b7ad2b5b3f54002c55ea6ebfb8bf949&o=" alt="Cabins" />
+                <div class="overlay-text">  
+                  <h3>Cabins</h3>
+                </div>
+               
+              </div>
+              <div class="property-item">
+                <img src="https://r-xx.bstatic.com/xdata/images/hotel/263x210/595550000.jpeg?k=71eeb3e0996d7f734e57a6fa426c718749a36df768ca5d2fb1dc65fcd7483c1d&o=" alt="Cottages" />
+                <div class="overlay-text">
+                  <h3>Cottages</h3>
+                </div>
+              </div>
+              <div class="property-item">
+                <img src="https://r-xx.bstatic.com/xdata/images/xphoto/263x210/45450090.jpeg?k=52f6b8190edb5a9c91528f8e0f875752ce55a6beb35dc62873601e57944990e4&o=" alt="Glamping Sites" />
+                <div class="overlay-text">
+                  <h3>Glamping Sites</h3>
+                </div>
+              </div>
+              <div class="property-item">
+                <img src="https://q-xx.bstatic.com/xdata/images/hotel/263x210/595551195.jpeg?k=fe19403cca087623a33bf24c4154a636cd26d04c2aa948634fb05afa971e7767&o=" alt="Villas" />
+                <div class="overlay-text">
+                  <h3>Serviced Apartments</h3>
+                </div>
+              </div>
+              <div class="property-item">
+                <img src="https://q-xx.bstatic.com/xdata/images/hotel/263x210/595550229.jpeg?k=2ae1f5975fa1f846ac707d3334eb604a7e8f817f640cbd790185b2691532476b&o=" alt="Holiday Homes" />
+                <div class="overlay-text">
+                  <h3>Holiday Homes</h3>
+                </div>
+                
+              </div>
+              <!-- Add more items here if needed -->
+            </div>
+      
+            <button class="arrow right">&#10095;</button>
+          </div>
+        </div>
+      </section>
+      <script>
+        const carousel = document.getElementById('carousel');
+        const leftBtn = document.querySelector('.arrow.left');
+        const rightBtn = document.querySelector('.arrow.right');
+      
+        rightBtn.addEventListener('click', () => {
+          carousel.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+      
+        leftBtn.addEventListener('click', () => {
+          carousel.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+      </script>
+      
+      
+
+    <section class="trending-destinations">
+        <div class="container">
+            <h2>Trending destinations</h2>
+            <p>Most popular choices for travelers from India</p>
+            
+            <div class="destination-grid">
+                <div class="destination-card">
+                    <img src="https://cf.bstatic.com/xdata/images/city/600x600/684765.jpg?k=3f7d20034c13ac7686520ac1ccf1621337a1e59860abfd9cbd96f8d66b4fc138&o=" alt="New Delhi">
+                    <div class="destination-info">
+                        <h3>New Delhi</h3>
+                        <p>नई दिल्ली</p>
+                        <p class="country">India</p>
+                    </div>
+                </div>
+
+
+                
+                <div class="destination-card">
+                    <img src="https://cf.bstatic.com/xdata/images/city/600x600/684534.jpg?k=d1fe86c22f2433f4e2dda14ddcbe80feb024b0fb30305e5684a1241fba5d4cff&o=" alt="Bangalore">
+                    <div class="destination-info">
+                        <h3>Bangalore</h3>
+                        <p>ಬೆಂಗಳೂರು</p>
+                        <p class="country">India</p>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://cf.bstatic.com/xdata/images/city/600x600/971346.jpg?k=40eeb583a755f2835f4dcb6900cdeba2a46dc9d50e64f2aa04206f5f6fce5671&o=" alt="Mumbai">
+                    <div class="destination-info">
+                        <h3>Mumbai</h3>
+                        <p>मुंबई</p>
+                        <p class="country">India</p>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://cf.bstatic.com/xdata/images/city/600x600/684730.jpg?k=e37b93d88c1fe12e827f10c9d6909a1def7349be2c68df5de885deaa4bc01ee3&o=" alt="Chennai">
+                    <div class="destination-info">
+                        <h3>Chennai</h3>
+                        <p>சென்னைக்</p>
+                        <p class="country">India</p>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://cf.bstatic.com/xdata/images/city/600x600/684940.jpg?k=f8eb21b5c72289407585cef7ff7cfc99798ac9238398d7b27c6929ad6c54f78a&o=" alt="Varanasi">
+                    <div class="destination-info">
+                        <h3>Varanasi</h3>
+                        <p>वाराणसी</p>
+                        <p class="country">India</p>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://media.istockphoto.com/id/1215274990/photo/high-wide-angle-view-of-charminar-in-the-night.jpg?s=612x612&w=0&k=20&c=byyIjqgbslf-L191n6SJu0s35fvNoVeWsxV5rIPK7Sk=" alt="Hyderabad">
+                    <div class="destination-info">
+                        <h3>Hyderabad</h3>
+                        <p>హైదరాబాద్</p>
+                        <p class="country">India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="property-types">
+        <div class="container">
+          <h2>Explore India</h2>
+            <p class="p-subtitle">These popular destinations have a lot to offer</p>
+          <div class="carousel-wrapper">
+            
+      
+            <div class="property-carousel" id="carousel">
+              <div class="property-item">
+                <img src="https://cf.bstatic.com/xdata/images/city/600x600/684765.jpg?k=3f7d20034c13ac7686520ac1ccf1621337a1e59860abfd9cbd96f8d66b4fc138&o=" alt="New Delhi">
+                <div class="overlay-text">
+                  <h3>New Delhi</h3>
+                </div>
+              </div>
+              <div class="property-item">
+                <img src="https://cf.bstatic.com/xdata/images/city/600x600/684534.jpg?k=d1fe86c22f2433f4e2dda14ddcbe80feb024b0fb30305e5684a1241fba5d4cff&o=" alt="Bangalore">
+                <div class="overlay-text">
+                  <h3>Bangalore</h3>
+                </div>
+              </div>
+              <div class="property-item">
+                <img src="https://cf.bstatic.com/xdata/images/city/600x600/971346.jpg?k=40eeb583a755f2835f4dcb6900cdeba2a46dc9d50e64f2aa04206f5f6fce5671&o=" alt="Mumbai">
+                <div class="overlay-text">
+                  <h3>Mumbai</h3>
+                </div>
+               
+              </div>
+              <div class="property-item">
+                <img src="https://cf.bstatic.com/xdata/images/city/600x600/684730.jpg?k=e37b93d88c1fe12e827f10c9d6909a1def7349be2c68df5de885deaa4bc01ee3&o=" alt="Chennai">
+                <div class="overlay-text">
+                  <h3>Chennai</h3>
+                </div>
+               
+              </div>
+              <div class="property-item">
+                <img src="https://cf.bstatic.com/xdata/images/city/600x600/684940.jpg?k=f8eb21b5c72289407585cef7ff7cfc99798ac9238398d7b27c6929ad6c54f78a&o=" alt="Varanasi">
+                <div class="overlay-text">
+                  <h3>Varanasi</h3>
+                </div>
+                
+              </div>
+              <div class="property-item">
+                <img src="https://media.istockphoto.com/id/1215274990/photo/high-wide-angle-view-of-charminar-in-the-night.jpg?s=612x612&w=0&k=20&c=byyIjqgbslf-L191n6SJu0s35fvNoVeWsxV5rIPK7Sk=" alt="Hyderabad">
+                <div class="overlay-text">
+                  <h3>Hyderabad</h3>
+                </div>
+              
+              </div>
+            
+              <!-- Add more items here if needed -->
+            </div>
+      
+            
+          </div>
+        </div>
+      </section>
+      
+      <script>
+        const carousel = document.getElementById('carousel');
+        const leftBtn = document.querySelector('.arrow.left');
+        const rightBtn = document.querySelector('.arrow.right');
+      
+        rightBtn.addEventListener('click', () => {
+          carousel.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+      
+        leftBtn.addEventListener('click', () => {
+          carousel.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+      </script>
+
+
+<div class="container_x7y9">
+  <div class="header_a2b8">
+      <h1 class="title_c3d4">Quick and easy trip planner</h1>
+      <p class="subtitle_e5f6">Pick a vibe and explore the top destinations in India</p>
+  </div>
+  
+  <div class="tabs_g7h8">
+      <button class="tab_i9j1 active_k2l3" data-tab="beach">
+          <i class="fas fa-umbrella-beach"></i> Beach
+      </button>
+      <button class="tab_i9j1" data-tab="outdoors">
+          <i class="fas fa-bicycle"></i> Outdoors
+      </button>
+      <button class="tab_i9j1" data-tab="relax">
+          <i class="fas fa-spa"></i> Relax
+      </button>
+      <button class="tab_i9j1" data-tab="romance">
+          <i class="fas fa-heart"></i> Romance
+      </button>
+      <button class="tab_i9j1" data-tab="food">
+          <i class="fas fa-utensils"></i> Food
+      </button>
+  </div>
+  
+  <div class="tab_content_m4n5 active_k2l3" id="beach">
+      <div class="destinations_o6p7">
+          <div class="destination_q8r9">
+              <div class="image_s1t2">
+                  <img src="https://r-xx.bstatic.com/xdata/images/city/170x136/830670.jpg?k=225353f450982a4bb7328901bf3b2645e1aed24dd03fd02f447bd9dd5f31f1b6&o=" alt="Murud">
+              </div>
+              <h3 class="place_u3v4">Murud</h3>
+              <p class="distance_w5x6">714 km away</p>
+          </div>
+          <div class="destination_q8r9">
+              <div class="image_s1t2">
+                  <img src="https://r-xx.bstatic.com/xdata/images/city/170x136/765485.jpg?k=cfd6ac6a474db15e5cfb6ede2b343e55b7a8b433a53802df15a705afe2c441b9&o=" alt="Diveagar">
+              </div>
+              <h3 class="place_u3v4">Diveagar</h3>
+              <p class="distance_w5x6">719 km away</p>
+          </div>
+          <div class="destination_q8r9">
+              <div class="image_s1t2">
+                  <img src="https://r-xx.bstatic.com/xdata/images/city/170x136/630027.jpg?k=58e7a7ae31133fdd44bca3d96be4dc789b81088fe92cf293c0b5b21abe6d486d&o=" alt="Arambol">
+              </div>
+              <h3 class="place_u3v4">Arambol</h3>
+              <p class="distance_w5x6">830 km away</p>
+          </div>
+          <div class="destination_q8r9">
+              <div class="image_s1t2">
+                  <img src="https://r-xx.bstatic.com/xdata/images/city/170x136/684615.jpg?k=c842e0a2bf64c6b425f683b2025585e4e073562cd308beb5e0b5c89bab170846&o=" alt="Calangute">
+              </div>
+              <h3 class="place_u3v4">Calangute</h3>
+              <p class="distance_w5x6">839 km away</p>
+          </div>
+          <div class="destination_q8r9">
+              <div class="image_s1t2">
+                  <img src="https://r-xx.bstatic.com/xdata/images/city/170x136/762109.jpg?k=f951723f79a68a1a0f90965813ae3f956b3c68b51b0d98556a9ca41d68579455&o=" alt="Benaulim">
+              </div>
+              <h3 class="place_u3v4">Benaulim</h3>
+              <p class="distance_w5x6">851 km away</p>
+          </div>
+          <div class="destination_q8r9">
+              <div class="image_s1t2">
+                  <img src="https://q-xx.bstatic.com/xdata/images/city/170x136/766874.jpg?k=dba35f81d41e0b9e1299c5223e1267d0706120806cb39fd5c3c52ed1cc81fcb0&o=" alt="Agonda">
+              </div>
+              <h3 class="place_u3v4">Agonda</h3>
+              <p class="distance_w5x6">866 km away</p>
+          </div>
+      </div>
+      <button class="nav_button_y7z8 next_a9b1">
+          <i class="fas fa-chevron-right"></i>
+      </button>
+  </div>
+  
+  <div class="tab_content_m4n5" id="outdoors">
+      <div class="destinations_o6p7">
+          <div class="destination_q8r9">
+              <div class="image_s1t2">
+                  <img src="https://r-xx.bstatic.com/xdata/images/city/170x136/695962.jpg?k=dcd9d1b84ced1efc605c56e386d18d722a2d0e6c8d584d953d6dbcbe0b82768a&o=" alt="Kausani">
+              </div>
+              <h3 class="place_u3v4">Kausani</h3>
+              <p class="distance_w5x6">968 km away</p>
+          </div>
+          <div class="destination_q8r9">
+              <div class="image_s1t2">
+                  <img src="https://q-xx.bstatic.com/xdata/images/city/170x136/684880.jpg?k=e39b50ba8be4c6c6c413c963af6e0d452dbe0decaf72e13f9f798e65de549107&o=" alt="Rishikesh">
+              </div>
+              <h3 class="place_u3v4">Rishikesh</h3>
+              <p class="distance_w5x6">998 km away</p>
+          </div>
+          <!-- More outdoors destinations -->
+      </div>
+      <button class="nav_button_y7z8 next_a9b1">
+          <i class="fas fa-chevron-right"></i>
+      </button>
+  </div>
+  
+  <div class="tab_content_m4n5" id="relax">
+      <div class="destinations_o6p7">
+        <div class="destination_q8r9">
+          <div class="image_s1t2">
+              <img src="https://q-xx.bstatic.com/xdata/images/city/170x136/684880.jpg?k=e39b50ba8be4c6c6c413c963af6e0d452dbe0decaf72e13f9f798e65de549107&o=" alt="Rishikesh">
+          </div>
+          <h3 class="place_u3v4">Rishikesh</h3>
+          <p class="distance_w5x6">998 km away</p>
+      </div>
+          <!-- More relax destinations -->
+      </div>
+      <button class="nav_button_y7z8 next_a9b1">
+          <i class="fas fa-chevron-right"></i>
+      </button>
+  </div>
+  
+  <div class="tab_content_m4n5" id="romance">
+      <div class="destinations_o6p7">
+          <div class="destination_q8r9">
+              <div class="image_s1t2">
+                  <img src="https://q-xx.bstatic.com/xdata/images/city/170x136/684822.jpg?k=8e3dfdbe7474b16f993bead046bb1d3d329cdd68c6aee6ec72c8e935ba426a9f&o=" alt="Pune">
+              </div>
+              <h3 class="place_u3v4">Pune</h3>
+              <p class="distance_w5x6">620 km away</p>
+          </div>
+          <!-- More romance destinations -->
+      </div>
+      <button class="nav_button_y7z8 next_a9b1">
+          <i class="fas fa-chevron-right"></i>
+      </button>
+  </div>
+  
+  <div class="tab_content_m4n5" id="food">
+      <div class="destinations_o6p7">
+          <div class="destination_q8r9">
+              <div class="image_s1t2">
+                  <img src="https://r-xx.bstatic.com/xdata/images/city/170x136/684765.jpg?k=3f7d20034c13ac7686520ac1ccf1621337a1e59860abfd9cbd96f8d66b4fc138&o=" alt="Delhi">
+              </div>
+              <h3 class="place_u3v4">Delhi</h3>
+              <p class="distance_w5x6">854 km away</p>
+          </div>
+          <!-- More food destinations -->
+      </div>
+      <button class="nav_button_y7z8 next_a9b1">
+          <i class="fas fa-chevron-right"></i>
+      </button>
+  </div>
+</div>
+
+
+<section class="a7b3c9_section">
+  <div class="f2e4d8_container">
+      <div class="j5k7l9_header">
+          <h2 class="m3n5p7_title">Stay at our top unique properties</h2>
+          <p class="q2r4s6_subtitle">From castles and villas to boats and igloos, we've got it all</p>
+      </div>
+      
+      <div class="t8u6v4_carousel_container">
+          <div class="w9x7y5_carousel">
+              <!-- Property Card 1 -->
+              <div class="z1a3b5_card">
+                  <div class="c7d9e1_img_container">
+                      <img src="https://cf.bstatic.com/xdata/images/hotel/square600/280950287.webp?k=d5b9f77442fa93b93c86a720abebfe39a3f9532d4efa6a9cefa231a2ded6bd95&o=" alt="Domki Wierszyki Shelters" class="f3g5h7_img">
+                      <button class="i9j1k3_heart_btn"><i class="fa-regular fa-heart"></i></button>
+                  </div>
+                  <div class="l5m7n9_content">
+                      <h3 class="o1p3q5_property_name">Domki Wierszyki Shelters</h3>
+                      <p class="r7s9t1_location">Poland, Zakopane</p>
+                      <div class="u3v5w7_rating_row">
+                          <div class="x9y1z3_rating_badge">9.8</div>
+                          <div class="a2b4c6_rating_text">
+                              <span class="d8e0f2_quality">Exceptional</span>
+                              <span class="g4h6i8_reviews">90 reviews</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Property Card 2 -->
+              <div class="z1a3b5_card">
+                  <div class="c7d9e1_img_container">
+                      <img src="https://cf.bstatic.com/xdata/images/hotel/square600/132452060.webp?k=f9cd3042175e0da40abf6d3988b9f3ac91aaeaefd9941081dbadfd0875c8ab27&o=" alt="Ranczo w Dolinie" class="f3g5h7_img">
+                      <button class="i9j1k3_heart_btn"><i class="fa-regular fa-heart"></i></button>
+                  </div>
+                  <div class="l5m7n9_content">
+                      <h3 class="o1p3q5_property_name">Ranczo w Dolinie</h3>
+                      <p class="r7s9t1_location">Poland, Kiszkowo</p>
+                      <div class="u3v5w7_rating_row">
+                          <div class="x9y1z3_rating_badge">9.6</div>
+                          <div class="a2b4c6_rating_text">
+                              <span class="d8e0f2_quality">Exceptional</span>
+                              <span class="g4h6i8_reviews">180 reviews</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Property Card 3 -->
+              <div class="z1a3b5_card">
+                  <div class="c7d9e1_img_container">
+                      <img src="https://cf.bstatic.com/xdata/images/hotel/square600/187855604.webp?k=0abbcd2115938850aa3372f4e7bf847f2aeb9579d674ec40ff273230a840eb9d&o=" alt="Tiny House Dreischwesternherz" class="f3g5h7_img">
+                      <button class="i9j1k3_heart_btn"><i class="fa-regular fa-heart"></i></button>
+                  </div>
+                  <div class="l5m7n9_content">
+                      <h3 class="o1p3q5_property_name">Tiny House Dreischwesternherz</h3>
+                      <p class="r7s9t1_location">Germany, Trier</p>
+                      <div class="u3v5w7_rating_row">
+                          <div class="x9y1z3_rating_badge">9.6</div>
+                          <div class="a2b4c6_rating_text">
+                              <span class="d8e0f2_quality">Exceptional</span>
+                              <span class="g4h6i8_reviews">153 reviews</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Property Card 4 -->
+              <div class="z1a3b5_card">
+                  <div class="c7d9e1_img_container">
+                      <img src="https://cf.bstatic.com/xdata/images/hotel/square600/178421525.webp?k=6c9cfca83aa49631c55eaed32fb7a6eb68573ffa76a47b23346504830249b853&o=" alt="Das rote Haus hinterm Deich" class="f3g5h7_img">
+                      <button class="i9j1k3_heart_btn"><i class="fa-regular fa-heart"></i></button>
+                  </div>
+                  <div class="l5m7n9_content">
+                      <h3 class="o1p3q5_property_name">Das rote Haus hinterm Deich</h3>
+                      <p class="r7s9t1_location">Germany, Simonsberg</p>
+                      <div class="u3v5w7_rating_row">
+                          <div class="x9y1z3_rating_badge">9.2</div>
+                          <div class="a2b4c6_rating_text">
+                              <span class="d8e0f2_quality">Superb</span>
+                              <span class="g4h6i8_reviews">47 reviews</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          <button class="j0k2l4_nav_btn j0k2l4_prev"><i class="fas fa-chevron-left"></i></button>
+          <button class="j0k2l4_nav_btn j0k2l4_next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+  </div>
+</section>
+
+<!-- Inspiration Section -->
+<section class="m5n7p9_section">
+  <div class="f2e4d8_container">
+      <div class="q1r3s5_header_row">
+          <h2 class="t7u9v1_title">Get inspiration for your next trip</h2>
+          <a href="#" class="w3x5y7_more_link">More</a>
+      </div>
+      
+      <div class="z9a1b3_carousel_container">
+          <div class="c5d7e9_carousel">
+              <!-- Inspiration Card 1 -->
+              <div class="f1g3h5_card">
+                  <div class="i7j9k1_img_container">
+                      <video src="https://eu-assets.contentstack.com/v3/assets/bltbebdf496526c3cfd/blt0f67f40bb1f306c3/656d8bde4bf0bf040a8ea383/B6_NYE-2.mp4" alt="New Year's Eve in New York City" class="l3m5n7_img">
+                  </div>
+                  <div class="o9p1q3_content">
+                      <h3 class="r5s7t9_title">New Year's Eve in New York City</h3>
+                      <p class="u1v3w5_description">Ring in the new year with iconic moments and unforgettable memories in New York City</p>
+                  </div>
+              </div>
+              
+              <!-- Inspiration Card 2 -->
+              <div class="f1g3h5_card">
+                  <div class="i7j9k1_img_container">
+                      <img src="https://cf.bstatic.com/xdata/images/xphoto/720x405/292260574.webp?k=efc8e339ea66514c3b64c5bc891f1608d22a40eb23b853bc0c9ecb93c541ef10&o=" alt="6 best ryokans in Japan" class="l3m5n7_img">
+                  </div>
+                  <div class="o9p1q3_content">
+                      <h3 class="r5s7t9_title">6 best ryokans in Japan to rejuvenate yourself</h3>
+                      <p class="u1v3w5_description">Discover unmissable ryokans to relax and unwind in style.</p>
+                  </div>
+              </div>
+              
+              <!-- Inspiration Card 3 -->
+              <div class="f1g3h5_card">
+                  <div class="i7j9k1_img_container">
+                      <img src="https://cf.bstatic.com/xdata/images/xphoto/540x405/290483794.webp?k=916f7bac0ccdb08efcb269ad29cc10816ab66cd1671359066d23d32fb17b5c39&o=" alt="7 best places in Asia to celebrate Christmas" class="l3m5n7_img">
+                  </div>
+                  <div class="o9p1q3_content">
+                      <h3 class="r5s7t9_title">7 best places in Asia to celebrate Christmas</h3>
+                      <p class="u1v3w5_description">Discover the shimmering lights and festive sights of Asia's holiday season.</p>
+                  </div>
+              </div>
+          </div>
+          
+          <button class="x7y9z1_nav_btn x7y9z1_prev"><i class="fas fa-chevron-left"></i></button>
+          <button class="x7y9z1_nav_btn x7y9z1_next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+  </div>
+</section>
+
+
+
+<footer class="footer1">
+  <div class="container1">
+      <!-- Popular with travellers section -->
+      <div class="section1">
+          <h2 class="heading2">Popular with travellers from India</h2>
+          
+          <div class="tabs3">
+              <button class="tab4 active1">Domestic cities</button>
+              <button class="tab4">International cities</button>
+              <button class="tab4">Regions</button>
+              <button class="tab4">Countries</button>
+              <button class="tab4">Places to stay</button>
+          </div>
+          
+          <div class="cities5">
+              <div class="column6">
+                  <a href="#" class="link7">Srinagar hotels</a>
+                  <a href="#" class="link7">Hyderabad hotels</a>
+                  <a href="#" class="link7">Rishikesh hotels</a>
+                  <a href="#" class="link7">Ayodhya hotels</a>
+                  <a href="#" class="link7">Shimla hotels</a>
+              </div>
+              <div class="column6">
+                  <a href="#" class="link7">Bangalore hotels</a>
+                  <a href="#" class="link7">Jaipur hotels</a>
+                  <a href="#" class="link7">Munnar hotels</a>
+                  <a href="#" class="link7">Varkala hotels</a>
+                  <a href="#" class="link7">Cochin hotels</a>
+              </div>
+              <div class="column6">
+                  <a href="#" class="link7">Mumbai hotels</a>
+                  <a href="#" class="link7">Puri hotels</a>
+                  <a href="#" class="link7">Mysore hotels</a>
+                  <a href="#" class="link7">Manali hotels</a>
+                  <a href="#" class="link7">Mussoorie hotels</a>
+              </div>
+              <div class="column6">
+                  <a href="#" class="link7">Ooty hotels</a>
+                  <a href="#" class="link7">Chennai hotels</a>
+                  <a href="#" class="link7">Varanasi hotels</a>
+                  <a href="#" class="link7">New Delhi hotels</a>
+                  <a href="#" class="link7">Udaipur hotels</a>
+              </div>
+              <div class="column6">
+                  <a href="#" class="link7">Lonavala hotels</a>
+                  <a href="#" class="link7">Puducherry hotels</a>
+                  <a href="#" class="link7">Pune hotels</a>
+                  <a href="#" class="link7">Gurgaon hotels</a>
+                  <a href="#" class="link7">Kodaikanal hotels</a>
+              </div>
+          </div>
+          
+          <button class="showMore8">
+              <i class="fas fa-plus"></i> Show more
+          </button>
+      </div>
+      
+      <!-- Navigation links -->
+      <div class="navLinks9">
+          <a href="#" class="navLink10">Countries</a> ·
+          <a href="#" class="navLink10">Regions</a> ·
+          <a href="#" class="navLink10">Cities</a> ·
+          <a href="#" class="navLink10">Districts</a> ·
+          <a href="#" class="navLink10">Airports</a> ·
+          <a href="#" class="navLink10">Hotels</a> ·
+          <a href="#" class="navLink10">Places of interest</a> ·
+          <a href="#" class="navLink10">Holiday Homes</a> ·
+          <a href="#" class="navLink10">Apartments</a> ·
+          <a href="#" class="navLink10">Resorts</a> ·
+          <a href="#" class="navLink10">Villas</a> ·
+          <a href="#" class="navLink10">Hostels</a> ·
+          <a href="#" class="navLink10">B&Bs</a> ·
+          <a href="#" class="navLink10">Guest Houses</a> ·
+          <a href="#" class="navLink10">Unique places to stay</a> ·
+          <a href="#" class="navLink10">All destinations</a>
+      </div>
+      
+      <div class="navLinks9">
+          <a href="#" class="navLink10">All flight destinations</a> ·
+          <a href="#" class="navLink10">All car hire locations</a> ·
+          <a href="#" class="navLink10">All holiday destinations</a> ·
+          <a href="#" class="navLink10">Guides</a> ·
+          <a href="#" class="navLink10">Discover</a> ·
+          <a href="#" class="navLink10">Reviews</a> ·
+          <a href="#" class="navLink10">Discover monthly stays</a>
+      </div>
+      
+      <!-- Main footer columns -->
+      <div class="footerColumns11">
+          <div class="column12">
+              <h3 class="columnTitle13">Support</h3>
+              <ul class="columnList14">
+                  <li><a href="#" class="columnLink15">Coronavirus (COVID-19) FAQs</a></li>
+                  <li><a href="#" class="columnLink15">Manage your trips</a></li>
+                  <li><a href="#" class="columnLink15">Contact Customer Service</a></li>
+                  <li><a href="#" class="columnLink15">Safety resource centre</a></li>
+              </ul>
+          </div>
+          
+          <div class="column12">
+              <h3 class="columnTitle13">Discover</h3>
+              <ul class="columnList14">
+                  <li><a href="#" class="columnLink15">Genius loyalty programme</a></li>
+                  <li><a href="#" class="columnLink15">Seasonal and holiday deals</a></li>
+                  <li><a href="#" class="columnLink15">Travel articles</a></li>
+                  <li><a href="#" class="columnLink15">Booking.com for Business</a></li>
+                  <li><a href="#" class="columnLink15">Traveller Review Awards</a></li>
+                  <li><a href="#" class="columnLink15">Car hire</a></li>
+                  <li><a href="#" class="columnLink15">Flight finder</a></li>
+                  <li><a href="#" class="columnLink15">Restaurant reservations</a></li>
+                  <li><a href="#" class="columnLink15">Booking.com for Travel Agents</a></li>
+              </ul>
+          </div>
+          
+          <div class="column12">
+              <h3 class="columnTitle13">Terms and settings</h3>
+              <ul class="columnList14">
+                  <li><a href="#" class="columnLink15">Privacy & cookies</a></li>
+                  <li><a href="#" class="columnLink15">Terms and conditions</a></li>
+                  <li><a href="#" class="columnLink15">Grievance officer</a></li>
+                  <li><a href="#" class="columnLink15">Modern Slavery Statement</a></li>
+                  <li><a href="#" class="columnLink15">Human Rights Statement</a></li>
+              </ul>
+          </div>
+          
+          <div class="column12">
+              <h3 class="columnTitle13">Partners</h3>
+              <ul class="columnList14">
+                  <li><a href="#" class="columnLink15">Extranet login</a></li>
+                  <li><a href="#" class="columnLink15">Partner help</a></li>
+                  <li><a href="#" class="columnLink15">List your property</a></li>
+                  <li><a href="#" class="columnLink15">Become an affiliate</a></li>
+              </ul>
+          </div>
+          
+          <div class="column12">
+              <h3 class="columnTitle13">About</h3>
+              <ul class="columnList14">
+                  <li><a href="#" class="columnLink15">About Booking.com</a></li>
+                  <li><a href="#" class="columnLink15">How we work</a></li>
+                  <li><a href="#" class="columnLink15">Sustainability</a></li>
+                  <li><a href="#" class="columnLink15">Press centre</a></li>
+                  <li><a href="#" class="columnLink15">Careers</a></li>
+                  <li><a href="#" class="columnLink15">Investor relations</a></li>
+                  <li><a href="#" class="columnLink15">Corporate contact</a></li>
+              </ul>
+          </div>
+      </div>
+      
+      <!-- Currency selector -->
+      <div class="currency16">
+          <div class="currencySelector17">
+              <div class="flag18">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="Indian flag" width="20">
+              </div>
+              <span class="currencyCode19">INR</span>
+          </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="copyright20">
+          <p class="copyrightText21">Booking.com is part of Booking Holdings Inc., the world leader in online travel and related services.</p>
+          <p class="copyrightText21">Copyright © 1996–2025 Booking.com™. All rights reserved.</p>
+      </div>
+      
+      <!-- Partner logos -->
+      <div class="partnerLogos22">
+          <img src="https://cf.bstatic.com/static/img/tfl/group_logos/logo_booking/27c8d1832de6a3123b6ee45b59ae2f81b0d9d0d0.png" alt="Booking.com" class="logo23">
+          <img src="https://cf.bstatic.com/static/img/tfl/group_logos/logo_priceline/f80e129541f2a952d470df2447373390f3dd4e44.png" alt="Priceline" class="logo23">
+          <img src="https://cf.bstatic.com/static/img/tfl/group_logos/logo_kayak/83ef7122074473a6566094e957ff834badb58ce6.png" alt="KAYAK" class="logo23">
+          <img src="https://cf.bstatic.com/static/img/tfl/group_logos/logo_agoda/1c9191b6a3651bf030e41e99a153b64f449845ed.png" alt="Agoda" class="logo23">
+          <img src="https://cf.bstatic.com/static/img/tfl/group_logos/logo_rentalcars/6bc5ec89d870111592a378bbe7a2086f0b01abc4.png" alt="Rentalcars" class="logo23">
+          <img src="https://cf.bstatic.com/static/img/tfl/group_logos/logo_opentable/a4b50503eda6c15773d6e61c238230eb42fb050d.png" alt="OpenTable" class="logo23">
+      </div>
+  </div>
+</footer>
+
+
+ <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Tab switching functionality
+    const tabs = document.querySelectorAll('.tab_i9j1');
+    const tabContents = document.querySelectorAll('.tab_content_m4n5');
+    
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Remove active class from all tabs and contents
+            tabs.forEach(t => t.classList.remove('active_k2l3'));
+            tabContents.forEach(content => content.classList.remove('active_k2l3'));
+            
+            // Add active class to clicked tab
+            tab.classList.add('active_k2l3');
+            
+            // Show corresponding content
+            const tabId = tab.getAttribute('data-tab');
+            document.getElementById(tabId).classList.add('active_k2l3');
+        });
+    });
+    
+    // Horizontal scrolling with next buttons
+    const nextButtons = document.querySelectorAll('.next_a9b1');
+    
+    nextButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const destinationsContainer = button.previousElementSibling;
+            const scrollAmount = destinationsContainer.offsetWidth * 0.8;
+            destinationsContainer.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+    });
+    
+    // Touch scrolling for mobile
+    const destinationsContainers = document.querySelectorAll('.destinations_o6p7');
+    
+    destinationsContainers.forEach(container => {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        
+        container.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - container.offsetLeft;
+            scrollLeft = container.scrollLeft;
+        });
+        
+        container.addEventListener('mouseleave', () => {
+            isDown = false;
+        });
+        
+        container.addEventListener('mouseup', () => {
+            isDown = false;
+        });
+        
+        container.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - container.offsetLeft;
+            const walk = (x - startX) * 2;
+            container.scrollLeft = scrollLeft - walk;
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize variables for both carousels
+    const propertiesCarousel = {
+        container: document.querySelector('.w9x7y5_carousel'),
+        cards: document.querySelectorAll('.z1a3b5_card'),
+        prevBtn: document.querySelector('.j0k2l4_prev'),
+        nextBtn: document.querySelector('.j0k2l4_next'),
+        currentIndex: 0,
+        cardWidth: 0,
+        visibleCards: 0,
+        totalCards: document.querySelectorAll('.z1a3b5_card').length
+    };
+    
+    const inspirationCarousel = {
+        container: document.querySelector('.c5d7e9_carousel'),
+        cards: document.querySelectorAll('.f1g3h5_card'),
+        prevBtn: document.querySelector('.x7y9z1_prev'),
+        nextBtn: document.querySelector('.x7y9z1_next'),
+        currentIndex: 0,
+        cardWidth: 0,
+        visibleCards: 0,
+        totalCards: document.querySelectorAll('.f1g3h5_card').length
+    };
+    
+    // Heart button functionality
+    const heartBtns = document.querySelectorAll('.i9j1k3_heart_btn');
+    heartBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            this.classList.toggle('active');
+            
+            // Add heart animation
+            if (this.classList.contains('active')) {
+                this.innerHTML = '<i class="fas fa-heart"></i>';
+                
+                // Create and animate heart particles
+                createHeartParticles(this);
+            } else {
+                this.innerHTML = '<i class="far fa-heart"></i>';
+            }
+        });
+    });
+    
+    // Function to create heart particles animation
+    function createHeartParticles(btn) {
+        const numParticles = 5;
+        
+        for (let i = 0; i < numParticles; i++) {
+            const particle = document.createElement('span');
+            particle.classList.add('h8i0j2_heart_particle');
+            particle.innerHTML = '❤️';
+            particle.style.position = 'absolute';
+            particle.style.fontSize = '12px';
+            particle.style.pointerEvents = 'none';
+            particle.style.zIndex = '100';
+            particle.style.opacity = '1';
+            
+            // Random position around the button
+            const angle = Math.random() * Math.PI * 2;
+            const distance = 20 + Math.random() * 30;
+            const startX = 18;
+            const startY = 18;
+            const endX = startX + Math.cos(angle) * distance;
+            const endY = startY + Math.sin(angle) * distance;
+            
+            particle.style.left = `${startX}px`;
+            particle.style.top = `${startY}px`;
+            
+            btn.appendChild(particle);
+            
+            // Animate the particle
+            const animation = particle.animate([
+                { 
+                    transform: `translate(0, 0) scale(0.5)`,
+                    opacity: 1
+                },
+                { 
+                    transform: `translate(${endX - startX}px, ${endY - startY}px) scale(1)`,
+                    opacity: 0
+                }
+            ], {
+                duration: 1000 + Math.random() * 500,
+                easing: 'cubic-bezier(0.1, 0.8, 0.2, 1)'
+            });
+            
+            animation.onfinish = () => {
+                particle.remove();
+            };
+        }
+    }
+    
+    // Function to calculate carousel dimensions
+    function calculateCarouselDimensions() {
+        // Properties carousel
+        if (propertiesCarousel.cards.length > 0) {
+            const cardStyle = window.getComputedStyle(propertiesCarousel.cards[0]);
+            const cardWidth = propertiesCarousel.cards[0].offsetWidth + 
+                              parseFloat(cardStyle.marginLeft) + 
+                              parseFloat(cardStyle.marginRight);
+            
+            propertiesCarousel.cardWidth = cardWidth;
+            
+            // Calculate visible cards based on viewport width
+            const containerWidth = propertiesCarousel.container.parentElement.offsetWidth;
+            propertiesCarousel.visibleCards = Math.floor(containerWidth / cardWidth);
+        }
+        
+        // Inspiration carousel
+        if (inspirationCarousel.cards.length > 0) {
+            const cardStyle = window.getComputedStyle(inspirationCarousel.cards[0]);
+            const cardWidth = inspirationCarousel.cards[0].offsetWidth + 
+                              parseFloat(cardStyle.marginLeft) + 
+                              parseFloat(cardStyle.marginRight);
+            
+            inspirationCarousel.cardWidth = cardWidth;
+            
+            // Calculate visible cards based on viewport width
+            const containerWidth = inspirationCarousel.container.parentElement.offsetWidth;
+            inspirationCarousel.visibleCards = Math.floor(containerWidth / cardWidth);
+        }
+    }
+    
+    // Function to move carousel
+    function moveCarousel(carousel, direction) {
+        if (direction === 'next') {
+            if (carousel.currentIndex < carousel.totalCards - carousel.visibleCards) {
+                carousel.currentIndex++;
+            } else {
+                // Loop back to start with animation
+                animateCarouselReset(carousel);
+                return;
+            }
+        } else {
+            if (carousel.currentIndex > 0) {
+                carousel.currentIndex--;
+            } else {
+                // Optional: Loop to end
+                // carousel.currentIndex = carousel.totalCards - carousel.visibleCards;
+                return;
+            }
+        }
+        
+        const translateX = -carousel.currentIndex * (carousel.cardWidth + 20); // 20px is the gap
+        carousel.container.style.transform = `translateX(${translateX}px)`;
+    }
+    
+    // Function to animate carousel reset
+    function animateCarouselReset(carousel) {
+        // First move a bit further to indicate end
+        const currentTranslate = -carousel.currentIndex * (carousel.cardWidth + 20);
+        const furtherTranslate = currentTranslate - 30;
+        
+        carousel.container.style.transition = 'transform 0.3s ease';
+        carousel.container.style.transform = `translateX(${furtherTranslate}px)`;
+        
+        // Then animate back to start
+        setTimeout(() => {
+            carousel.container.style.transition = 'transform 0s';
+            carousel.container.style.transform = 'translateX(0)';
+            carousel.currentIndex = 0;
+            
+            // Re-enable smooth transitions after reset
+            setTimeout(() => {
+                carousel.container.style.transition = 'transform 0.5s ease';
+            }, 50);
+        }, 300);
+    }
+    
+    // Initialize carousels
+    function initCarousels() {
+        calculateCarouselDimensions();
+        
+        // Properties carousel navigation
+        if (propertiesCarousel.prevBtn && propertiesCarousel.nextBtn) {
+            propertiesCarousel.prevBtn.addEventListener('click', () => {
+                moveCarousel(propertiesCarousel, 'prev');
+            });
+            
+            propertiesCarousel.nextBtn.addEventListener('click', () => {
+                moveCarousel(propertiesCarousel, 'next');
+            });
+        }
+        
+        // Inspiration carousel navigation
+        if (inspirationCarousel.prevBtn && inspirationCarousel.nextBtn) {
+            inspirationCarousel.prevBtn.addEventListener('click', () => {
+                moveCarousel(inspirationCarousel, 'prev');
+            });
+            
+            inspirationCarousel.nextBtn.addEventListener('click', () => {
+                moveCarousel(inspirationCarousel, 'next');
+            });
+        }
+        
+        // Add touch swipe functionality
+        addSwipeSupport(propertiesCarousel);
+        addSwipeSupport(inspirationCarousel);
+    }
+    
+    // Add touch swipe support
+    function addSwipeSupport(carousel) {
+        let startX, moveX, threshold = 100;
+        let isDown = false;
+        
+        carousel.container.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDown = true;
+            carousel.container.style.transition = 'none';
+        });
+        
+        carousel.container.addEventListener('touchmove', (e) => {
+            if (!isDown) return;
+            moveX = e.touches[0].clientX;
+            const diff = moveX - startX;
+            const currentTranslate = -carousel.currentIndex * (carousel.cardWidth + 20);
+            carousel.container.style.transform = `translateX(${currentTranslate + diff}px)`;
+        });
+        
+        carousel.container.addEventListener('touchend', (e) => {
+            isDown = false;
+            carousel.container.style.transition = 'transform 0.5s ease';
+            
+            if (startX && moveX) {
+                const diff = moveX - startX;
+                if (diff > threshold) {
+                    moveCarousel(carousel, 'prev');
+                } else if (diff < -threshold) {
+                    moveCarousel(carousel, 'next');
+                } else {
+                    // Reset to current position if swipe wasn't strong enough
+                    const currentTranslate = -carousel.currentIndex * (carousel.cardWidth + 20);
+                    carousel.container.style.transform = `translateX(${currentTranslate}px)`;
+                }
+            }
+            
+            startX = null;
+            moveX = null;
+        });
+    }
+    
+    // Initialize on load
+    initCarousels();
+    
+    // Reinitialize on window resize
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            calculateCarouselDimensions();
+            
+            // Reset position after resize
+            propertiesCarousel.currentIndex = 0;
+            propertiesCarousel.container.style.transform = 'translateX(0)';
+            
+            inspirationCarousel.currentIndex = 0;
+            inspirationCarousel.container.style.transform = 'translateX(0)';
+        }, 250);
+    });
+    
+    // Add scroll animation for cards
+    function animateOnScroll() {
+        const cards = document.querySelectorAll('.z1a3b5_card, .f1g3h5_card');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+        
+        cards.forEach(card => {
+            observer.observe(card);
+        });
+    }
+    
+    // Initialize scroll animations
+    animateOnScroll();
+});
+ </script>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
